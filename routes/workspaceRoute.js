@@ -13,6 +13,8 @@ route.get("/:workspaceId/members", authMiddlewear, workspaceCtrl.getWorkspaceMem
 
 route.get("/:workspaceId/invitations", authMiddlewear, invitationController.listWorkspaceInvitations);
 
+route.post("/:workspaceId/invitations", authMiddlewear, invitationController.inviteMember);
+
 route.patch("/:workspaceId/members/:memberId/role", authMiddlewear, workspaceCtrl.changeMemberRole);
 
 route.delete("/:workspaceId/members/:memberId", authMiddlewear, workspaceCtrl.removeMember);
